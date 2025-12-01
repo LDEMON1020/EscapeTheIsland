@@ -1223,7 +1223,7 @@ MonoBehaviour:
   toolDamage: 1
   hitCooldown: 0.15
   inventory: {fileID: 907930756}
-  selectedBlock: {fileID: 9095292568775518708, guid: 8086bc3a66c1a5441bba54d22258e3fc,
+  selectedBlock: {fileID: 3410803436948393854, guid: e816f5d56939f3b49bebae0594d5116f,
     type: 3}
 --- !u!1 &1432589340
 GameObject:
@@ -1269,9 +1269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41dbae4d29f13b34c938d9fd43ea28d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrassSprite: {fileID: 21300000, guid: e1a141e640b6f7e46b1b62fcc0232740, type: 3}
-  DirtSprite: {fileID: 21300000, guid: 44048543473829f4fa1a25d7ecfb0289, type: 3}
-  WaterSprite: {fileID: 21300000, guid: ea57ef4c8c648e445870605033f4e47f, type: 3}
+  GrassSprite: {fileID: 21300000, guid: 69dac5931c17bfe468fb11b548930594, type: 3}
+  DirtSprite: {fileID: 21300000, guid: d9500593e509d684f8102aa482ec9af8, type: 3}
+  WaterSprite: {fileID: 21300000, guid: 378fd4c5680ebe747a9bab2a2267c778, type: 3}
+  StoneSprite: {fileID: 21300000, guid: 27d79c4b9dc627542bb0b0cae73d21ba, type: 3}
   Slot:
   - {fileID: 727930502}
   - {fileID: 201872505}
@@ -1944,9 +1945,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockPrefab:
-  - {fileID: 9095292568775518708, guid: 8086bc3a66c1a5441bba54d22258e3fc, type: 3}
+  - {fileID: 4632097628568143075, guid: 8086bc3a66c1a5441bba54d22258e3fc, type: 3}
   - {fileID: 7753649157433030316, guid: 863e77d14504efd429195c6dd5644fbd, type: 3}
   - {fileID: 6087815403991167411, guid: cf88509aa7456974d88dbc309b5726f8, type: 3}
+  - {fileID: 202139715820829736, guid: 6ac6ae035afb86e458456defb13fca13, type: 3}
   width: 20
   depth: 20
   maxHeight: 16

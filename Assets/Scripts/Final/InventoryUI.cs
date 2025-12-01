@@ -7,6 +7,7 @@ public class InventoryUI : MonoBehaviour
     public Sprite GrassSprite;
     public Sprite DirtSprite;
     public Sprite WaterSprite;
+    public Sprite StoneSprite;
 
     public List<Transform> Slot = new List<Transform>();
     public GameObject Slotitem;
@@ -102,6 +103,9 @@ public class InventoryUI : MonoBehaviour
 
                 case BlockType.Water:
                     sitem.ItemSetting(WaterSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                case BlockType.Stone:
+                    sitem.ItemSetting(StoneSprite, "x" + item.Value.ToString(), item.Key);
                     break;
             }
             idx++;
