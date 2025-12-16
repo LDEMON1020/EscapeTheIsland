@@ -13,9 +13,9 @@ public class PlayerControllersecound : MonoBehaviour
     CharacterController controller;
     Transform cam;
     Vector3 velocity;
-    bool isGrounded;
+    public bool isGrounded;
+    public bool Inwater;
     public craftingPanel craftingPanel;
-    public WaterScript water;
  
     void Awake()
     {
@@ -24,7 +24,6 @@ public class PlayerControllersecound : MonoBehaviour
         {
             cam = GetComponentInChildren<Camera>()?.transform;
         }
-        water = FindObjectOfType<WaterScript>();
     }
     // Update is called once per frame
     void Update()
@@ -37,6 +36,12 @@ public class PlayerControllersecound : MonoBehaviour
     {
         if (!craftingPanel.isOpen)
         {
+            if (Input.GetButtonDown("Jump") && Inwater)
+            {
+                velocity.y = Mathf.Sqrt(jumpPower * -2f * gravity);
+                return;
+            }
+
             isGrounded = controller.isGrounded;
             if (isGrounded && velocity.y < 0)
                 velocity.y = -2f;
@@ -44,7 +49,7 @@ public class PlayerControllersecound : MonoBehaviour
             float v = Input.GetAxis("Vertical");
             Vector3 move = transform.right * h + transform.forward * v;
             controller.Move(move * movespeed * Time.deltaTime);
-            if (Input.GetButtonDown("Jump") && isGrounded && !water.inWater)
+            if (Input.GetButtonDown("Jump") && isGrounded)
                 velocity.y = Mathf.Sqrt(jumpPower * -2f * gravity);
         }
             velocity.y += gravity * Time.deltaTime;

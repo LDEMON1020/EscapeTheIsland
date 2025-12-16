@@ -5,7 +5,6 @@ using UnityEngine;
 public class WaterScript : MonoBehaviour
 {
     public PlayerControllersecound player;
-    public bool inWater;
     private void Awake()
     {
         player = FindObjectOfType<PlayerControllersecound>();
@@ -15,19 +14,18 @@ public class WaterScript : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            inWater = !inWater;
             player.gravity = -2.2f;
             player.jumpPower = 0.2f;
-
+            player.Inwater = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            inWater = !inWater;
             player.gravity = -9.81f;
             player.jumpPower = 1f;
+            player.Inwater = false;
         }
     }
 }
