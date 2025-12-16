@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour
     public Sprite StoneSprite;
     public Sprite Stone_AxeSprite;
     public Sprite Stone_ShovelSprite;
+    public Sprite IronStoneSprite;
 
     public List<Transform> Slot = new List<Transform>();
     public GameObject Slotitem;
@@ -114,6 +115,9 @@ public class InventoryUI : MonoBehaviour
                     break;
                 case ItemType.Stone_Shovel:
                     sitem.ItemSetting(Stone_ShovelSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                case ItemType.Iron:
+                    sitem.ItemSetting(IronStoneSprite, "x" + item.Value.ToString(), item.Key);
                     break;
             }
             idx++;
