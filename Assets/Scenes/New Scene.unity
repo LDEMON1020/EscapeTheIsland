@@ -2759,9 +2759,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockPrefab:
-  - {fileID: 201619378542297668, guid: 9483981733a91064eae714c98abe683c, type: 3}
-  - {fileID: 8083192202786815185, guid: e8b493a6e88c5e444bca895118b02285, type: 3}
-  - {fileID: 2687365108575239454, guid: e81fcd762609d4e4fae1eafc09dd8569, type: 3}
+  - {fileID: 962917002488509003, guid: 8086bc3a66c1a5441bba54d22258e3fc, type: 3}
+  - {fileID: 4120982850644054893, guid: 863e77d14504efd429195c6dd5644fbd, type: 3}
+  - {fileID: 3532428922041336489, guid: cf88509aa7456974d88dbc309b5726f8, type: 3}
   width: 20
   depth: 20
   maxHeight: 16
