@@ -14,6 +14,8 @@ public class PlayerControllersecound : MonoBehaviour
     Transform cam;
     Vector3 velocity;
     bool isGrounded;
+    public craftingPanel craftingPanel;
+    public WaterScript water;
  
     void Awake()
     {
@@ -22,6 +24,7 @@ public class PlayerControllersecound : MonoBehaviour
         {
             cam = GetComponentInChildren<Camera>()?.transform;
         }
+        water = FindObjectOfType<WaterScript>();
     }
     // Update is called once per frame
     void Update()
@@ -32,27 +35,34 @@ public class PlayerControllersecound : MonoBehaviour
 
     void HandleMove()
     {
-        isGrounded = controller.isGrounded;
-        if (isGrounded && velocity.y < 0)
-            velocity.y = -2f;
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * h + transform.forward * v;
-        controller.Move(move * movespeed * Time.deltaTime);
-        if (Input.GetButtonDown("Jump") && isGrounded)
-            velocity.y = Mathf.Sqrt(jumpPower * -2f * gravity);
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        if (!craftingPanel.isOpen)
+        {
+            isGrounded = controller.isGrounded;
+            if (isGrounded && velocity.y < 0)
+                velocity.y = -2f;
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+            Vector3 move = transform.right * h + transform.forward * v;
+            controller.Move(move * movespeed * Time.deltaTime);
+            if (Input.GetButtonDown("Jump") && isGrounded && !water.inWater)
+                velocity.y = Mathf.Sqrt(jumpPower * -2f * gravity);
+        }
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
+        
     }
 
     void HandleLock()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-        transform.Rotate(Vector3.up * mouseX);
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
-        if (cam != null)
-            cam.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        if (!craftingPanel.isOpen)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+            transform.Rotate(Vector3.up * mouseX);
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -80f, 80f);
+            if (cam != null)
+                cam.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
     }
 }

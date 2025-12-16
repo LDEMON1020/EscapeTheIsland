@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3204916199018669106}
   - component: {fileID: 7782071024166284528}
   - component: {fileID: 5223136070794023359}
+  - component: {fileID: 4637859328783312955}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -100,7 +101,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -123,3 +124,16 @@ MonoBehaviour:
   hp: 0
   dropCount: 1
   mineable: 0
+--- !u!114 &4637859328783312955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687365108575239454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8bf87df00adbe41bd03cea2888f1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}

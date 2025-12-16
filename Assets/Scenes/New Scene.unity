@@ -1674,7 +1674,7 @@ GameObject:
   - component: {fileID: 1175561861}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1692,9 +1692,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 5
-  jumpPower: 5
+  jumpPower: 1
   gravity: -9.81
   mouseSensitivity: 5
+  craftingPanel: {fileID: 2104685960}
 --- !u!143 &1175561859
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2725,6 +2726,7 @@ MonoBehaviour:
   craftButton: {fileID: 141652466}
   clearButton: {fileID: 647805588}
   hintText: {fileID: 1572052493}
+  isOpen: 0
 --- !u!1 &2111012074
 GameObject:
   m_ObjectHideFlags: 0

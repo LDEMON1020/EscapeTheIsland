@@ -16,7 +16,7 @@ public class craftingPanel : MonoBehaviour
 
     readonly Dictionary<ItemType, int> planned = new();
 
-    bool isOpen;
+    public bool isOpen;
     // Start is called before the first frame update
     void Start()
     {
