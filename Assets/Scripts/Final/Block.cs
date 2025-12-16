@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron }
+public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron, Stick }
 public class Block : MonoBehaviour
 { 
 
@@ -20,6 +20,18 @@ public class Block : MonoBehaviour
         if (GetComponent<Collider>() == null) gameObject.AddComponent<BoxCollider>();
         if (string.IsNullOrEmpty(gameObject.tag) || gameObject.tag == "Untagged")
             gameObject.tag = "Block";
+    }
+
+    public bool IsDirtType()
+    {
+        return type == ItemType.Dirt || type == ItemType.Grass;
+    }
+
+    public bool IsWoodType()
+    {
+        // 지금은 Stick을 나무 계열로 취급
+        // 나중에 ItemType.Wood 추가하면 여기에 추가
+        return type == ItemType.Stick;
     }
 
     public void Hit(int damage, Inventory inven)

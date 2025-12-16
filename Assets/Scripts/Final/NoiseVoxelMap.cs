@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +40,7 @@ public class NoiseVoxelMap : MonoBehaviour
                     {
                         PlaceGrass(x, y, z);
                     }
-                    else if (y >= h - 3)   // «•∏Èø°º≠ 3ƒ≠±Ó¡ˆ¥¬ »Î
+                    else if (y >= h - 3)   // ÌëúÎ©¥ÏóêÏÑú 3Ïπ∏ÍπåÏßÄÎäî Ìùô
                     {
                         PlaceDirt(x, y, z);
                     }
@@ -65,7 +65,7 @@ public class NoiseVoxelMap : MonoBehaviour
         }
     }
 
-   private void PlaceGrass(int x,int y, int z)
+    private void PlaceGrass(int x, int y, int z)
     {
         var go = Instantiate(blockPrefab[0], new Vector3(x, y, z), Quaternion.identity, transform);
         go.name = $"A_{x}_{y}_{z}";
@@ -75,6 +75,12 @@ public class NoiseVoxelMap : MonoBehaviour
         b.maxHP = 1;
         b.dropCount = 1;
         b.mineable = true;
+
+        // ‚≠ê Grass ÏúÑÏóê 20% ÌôïÎ•†Î°ú Stick
+        if (Random.value < 0.1f)
+        {
+            PlaceStick(x, y + 1, z);
+        }
     }
     private void PlaceDirt(int x, int y, int z)
     {
@@ -116,6 +122,18 @@ public class NoiseVoxelMap : MonoBehaviour
         b.mineable = true;
     }
 
+    private void PlaceStick(int x, int y, int z)
+    {
+        var go = Instantiate(blockPrefab[5], new Vector3(x, y, z), Quaternion.identity, transform);
+        go.name = $"T_{x}_{y}_{z}";
+
+        var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
+        b.type = ItemType.Stick;
+        b.maxHP = 1;
+        b.dropCount = 1;
+        b.mineable = true;
+    }
+
     public void PlaceTile(Vector3Int pos, ItemType type)
     {
         switch(type)
@@ -134,6 +152,9 @@ public class NoiseVoxelMap : MonoBehaviour
                 break;
             case ItemType.Iron:
                 PlaceIron(pos.x, pos.y, pos.z);
+                break;
+            case ItemType.Stick:
+                PlaceStick(pos.x, pos.y, pos.z);
                 break;
         }
     }

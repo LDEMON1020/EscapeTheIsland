@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     public Sprite Stone_AxeSprite;
     public Sprite Stone_ShovelSprite;
     public Sprite IronStoneSprite;
+    public Sprite StickSprite;
 
     public List<Transform> Slot = new List<Transform>();
     public GameObject Slotitem;
@@ -47,6 +48,14 @@ public class InventoryUI : MonoBehaviour
                 SetSelection(idx);
                 selectedIndex = idx;
             }
+        }
+    }
+
+    public void OnSlotSelected(ItemType item)
+    {
+        if (item == ItemType.Stone_Axe || item == ItemType.Stone_Shovel)
+        {
+            FindObjectOfType<PlayerHarvester>().equippedTool = item;
         }
     }
 
@@ -118,6 +127,9 @@ public class InventoryUI : MonoBehaviour
                     break;
                 case ItemType.Iron:
                     sitem.ItemSetting(IronStoneSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                         case ItemType.Stick:
+                    sitem.ItemSetting(StickSprite, "x" + item.Value.ToString(), item.Key);
                     break;
             }
             idx++;
