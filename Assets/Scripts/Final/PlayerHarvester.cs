@@ -60,7 +60,7 @@ public class PlayerHarvester : MonoBehaviour
                 if (Physics.Raycast(ray, out var hit, rayDistance, hitMask, QueryTriggerInteraction.Ignore))
                 {
                     Vector3Int placePos = AdjacentCellOnHitFace(hit);
-                    BlockType selected = inventoryUI.GetInventorySlot();
+                    ItemType selected = inventoryUI.GetInventorySlot();
 
                     if (inventory.Consume(selected, 1))
                     {
