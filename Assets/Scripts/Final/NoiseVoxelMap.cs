@@ -40,9 +40,13 @@ public class NoiseVoxelMap : MonoBehaviour
                     {
                         PlaceGrass(x, y, z);
                     }
-                    else
+                    else if (y >= h - 3)   // 표면에서 3칸까지는 흙
                     {
                         PlaceDirt(x, y, z);
+                    }
+                    else                  // 그 아래는 전부 돌
+                    {
+                        PlaceStone(x, y, z);
                     }
                 }
 
@@ -81,6 +85,18 @@ public class NoiseVoxelMap : MonoBehaviour
         go.name = $"B_{x}_{y}_{z}";
     }
 
+    private void PlaceStone(int x, int y, int z)
+    {
+        var go = Instantiate(blockPrefab[3], new Vector3(x, y, z), Quaternion.identity, transform);
+        go.name = $"S_{x}_{y}_{z}";
+
+        var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
+        b.type = ItemType.Stone;
+        b.maxHP = 5;
+        b.dropCount = 1;
+        b.mineable = true;
+    }
+
     public void PlaceTile(Vector3Int pos, ItemType type)
     {
         switch(type)
@@ -93,6 +109,9 @@ public class NoiseVoxelMap : MonoBehaviour
                 break;
             case ItemType.Water:
                 PlaceWater(pos.x, pos.y, pos.z);
+                break;
+                case ItemType.Stone:
+                //PlaceStone(pos.x, pos.y, pos.z);
                 break;
         }
     }

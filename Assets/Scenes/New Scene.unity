@@ -2762,6 +2762,7 @@ MonoBehaviour:
   - {fileID: 962917002488509003, guid: 8086bc3a66c1a5441bba54d22258e3fc, type: 3}
   - {fileID: 4120982850644054893, guid: 863e77d14504efd429195c6dd5644fbd, type: 3}
   - {fileID: 3532428922041336489, guid: cf88509aa7456974d88dbc309b5726f8, type: 3}
+  - {fileID: 6053203307805746895, guid: 6ac6ae035afb86e458456defb13fca13, type: 3}
   width: 20
   depth: 20
   maxHeight: 16
