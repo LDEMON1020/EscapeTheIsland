@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron, Stick }
+public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron, Stick, Iron_Axe, iron_Shovel, Stone_Pickaxe, Iron_Pickaxe}
 public class Block : MonoBehaviour
 { 
 
@@ -32,6 +32,11 @@ public class Block : MonoBehaviour
         // 지금은 Stick을 나무 계열로 취급
         // 나중에 ItemType.Wood 추가하면 여기에 추가
         return type == ItemType.Stick;
+    }
+
+    public bool IsStoneType()
+    {
+        return type == ItemType.Stone || type == ItemType.Iron;
     }
 
     public void Hit(int damage, Inventory inven)

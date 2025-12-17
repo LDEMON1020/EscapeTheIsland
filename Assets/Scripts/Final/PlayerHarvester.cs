@@ -31,7 +31,11 @@ public class PlayerHarvester : MonoBehaviour
         bool isToolSelected =
     inventoryUI.selectedIndex >= 0 &&
     (inventoryUI.GetInventorySlot() == ItemType.Stone_Axe ||
-     inventoryUI.GetInventorySlot() == ItemType.Stone_Shovel);
+     inventoryUI.GetInventorySlot() == ItemType.Stone_Shovel ||
+     inventoryUI.GetInventorySlot() == ItemType.Stone_Pickaxe ||
+     inventoryUI.GetInventorySlot() == ItemType.Iron_Axe ||
+     inventoryUI.GetInventorySlot() == ItemType.iron_Shovel ||
+     inventoryUI.GetInventorySlot() == ItemType.Iron_Pickaxe);
 
         if (inventoryUI.selectedIndex < 0 || isToolSelected)
         {

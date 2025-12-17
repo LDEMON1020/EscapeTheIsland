@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 543863c97425e1e468b19bf9a653df0b, type: 3}
-  m_Name: Stone_Axe Recipe
+  m_Name: Stone_Axe
   m_EditorClassIdentifier: 
-  displayName: Axe
+  displayName: Stone_Axe
   inputs:
   - type: 3
     count: 5

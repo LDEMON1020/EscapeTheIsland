@@ -1762,6 +1762,7 @@ MonoBehaviour:
   inventory: {fileID: 907930756}
   selectedBlock: {fileID: 4935845079249988035, guid: bb81cebd996fd76428b28619da3c8da0,
     type: 3}
+  equippedTool: 0
 --- !u!1 &1432589340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1815,10 @@ MonoBehaviour:
   Stone_ShovelSprite: {fileID: 21300000, guid: e4db426731de6f5468aa96c6eb2398c6, type: 3}
   IronStoneSprite: {fileID: 21300000, guid: b8da89583b93f6e4c8e306cc537a8e8b, type: 3}
   StickSprite: {fileID: 21300000, guid: f7ecc78fdd5f5a1408de5744beb1520b, type: 3}
+  Iron_AxeSprite: {fileID: 21300000, guid: 46132332d2b0d73488e217158129e3fb, type: 3}
+  Iron_ShovelSprite: {fileID: 21300000, guid: 5b3943aea94c1244fa73d6ea50605948, type: 3}
+  Stone_Pickaxe: {fileID: 21300000, guid: 1a6674a44471b8a4098dec1beca2fafa, type: 3}
+  Iron_PickaxeSprite: {fileID: 21300000, guid: 7a665dd169a50884b92a82504b0468f2, type: 3}
   Slot:
   - {fileID: 727930502}
   - {fileID: 201872505}
@@ -2725,6 +2730,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2aea8e5ff06408d45a1d74ee114d1e76, type: 2}
   - {fileID: 11400000, guid: 4808c8f98f05d3d44bef40d3ba632900, type: 2}
   - {fileID: 11400000, guid: 4351c29574268d74595e56299ca4bdde, type: 2}
+  - {fileID: 11400000, guid: 1bbd0a940a2fb494f8ee3c8585f61be3, type: 2}
+  - {fileID: 11400000, guid: ba58887efdbcb3e4bb0a5a9154ae9b67, type: 2}
+  - {fileID: 11400000, guid: f102ac90e772708408e5be1b2b6b3a3f, type: 2}
   root: {fileID: 1826939869}
   plannedText: {fileID: 507045639}
   craftButton: {fileID: 141652466}
@@ -2767,8 +2775,8 @@ MonoBehaviour:
   - {fileID: 6053203307805746895, guid: 6ac6ae035afb86e458456defb13fca13, type: 3}
   - {fileID: 997799031020224062, guid: fe1ee98198fbcff4cabc5477591c0e55, type: 3}
   - {fileID: 683768047372584421, guid: 61c3fcf5868df9e4f88d4adcd7ca7cfd, type: 3}
-  width: 20
-  depth: 20
+  width: 40
+  depth: 40
   maxHeight: 16
   noiseScale: 8
   Water: 5

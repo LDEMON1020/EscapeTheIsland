@@ -12,6 +12,10 @@ public class InventoryUI : MonoBehaviour
     public Sprite Stone_ShovelSprite;
     public Sprite IronStoneSprite;
     public Sprite StickSprite;
+    public Sprite Iron_AxeSprite;
+    public Sprite Iron_ShovelSprite;
+    public Sprite Stone_Pickaxe;
+    public Sprite Iron_PickaxeSprite;
 
     public List<Transform> Slot = new List<Transform>();
     public GameObject Slotitem;
@@ -128,8 +132,20 @@ public class InventoryUI : MonoBehaviour
                 case ItemType.Iron:
                     sitem.ItemSetting(IronStoneSprite, "x" + item.Value.ToString(), item.Key);
                     break;
-                         case ItemType.Stick:
+                case ItemType.Stick:
                     sitem.ItemSetting(StickSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                case ItemType.Iron_Axe:
+                    sitem.ItemSetting(Iron_AxeSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                case ItemType.iron_Shovel:
+                    sitem.ItemSetting(Iron_ShovelSprite, "x" + item.Value.ToString(), item.Key);
+                    break;
+                    case ItemType.Stone_Pickaxe:
+                    sitem.ItemSetting(Stone_Pickaxe, "x" + item.Value.ToString(), item.Key);
+                    break;
+                    case ItemType.Iron_Pickaxe:
+                    sitem.ItemSetting(Iron_PickaxeSprite, "x" + item.Value.ToString(), item.Key);
                     break;
             }
             idx++;
