@@ -90,11 +90,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 68b291b8004ecd74ab96a240b85fb964,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5210367719066700706}
+      addedObject: {fileID: 9087123503480266491}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 68b291b8004ecd74ab96a240b85fb964,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9087123503480266491}
+      addedObject: {fileID: 5486082603593367722}
   m_SourcePrefab: {fileID: 100100000, guid: 68b291b8004ecd74ab96a240b85fb964, type: 3}
 --- !u!1 &493524947534446651 stripped
 GameObject:
@@ -102,23 +102,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 727387976842657130}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5210367719066700706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493524947534446651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c735bd3810a899f48948504a5bc9b2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 3
-  maxHP: 3
-  hp: 0
-  dropCount: 1
-  mineable: 1
 --- !u!114 &9087123503480266491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +115,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  maxHP: 50
+  maxHP: 60
   hp: 0
   dropCount: 1
   mineable: 1
+--- !u!65 &5486082603593367722
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493524947534446651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
