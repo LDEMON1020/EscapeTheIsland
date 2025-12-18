@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron, Stick, Iron_Axe, iron_Shovel, Stone_Pickaxe, Iron_Pickaxe}
+public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron, Stick, Iron_Axe, iron_Shovel, Stone_Pickaxe, Iron_Pickaxe, Titanium}
 public class Block : MonoBehaviour
 { 
 
@@ -36,7 +36,7 @@ public class Block : MonoBehaviour
 
     public bool IsStoneType()
     {
-        return type == ItemType.Stone || type == ItemType.Iron;
+        return type == ItemType.Stone || type == ItemType.Iron || type == ItemType.Titanium;
     }
 
     public void Hit(int damage, Inventory inven)

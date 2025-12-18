@@ -2534,6 +2534,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863967039}
   m_CullTransparentMesh: 1
+--- !u!1 &1899075047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899075049}
+  - component: {fileID: 1899075048}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1899075048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899075047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f43940090d6164aa6e7a91f45aa31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockPrefab:
+  - {fileID: 5975483019240856673, guid: b576ee56e3e8dc34abd8c6be6e5f2b8b, type: 3}
+  - {fileID: 4165072804996440864, guid: 8d336eafec46b2f42babbedd293b7967, type: 3}
+  - {fileID: 4280810894591228642, guid: 4c45114cd9fecf64b9cc059f26a84ac5, type: 3}
+  - {fileID: 493524947534446651, guid: 398ede479a2093b47ad43c63d7f4b018, type: 3}
+  - {fileID: 8098086615780982654, guid: e42d26202f8815f4f93d9e7a235d63f8, type: 3}
+  - {fileID: 683768047372584421, guid: 76c229c9f4a6fa445b26912d59349443, type: 3}
+  width: 40
+  depth: 40
+  maxHeight: 16
+  noiseScale: 8
+  Water: 5
+--- !u!4 &1899075049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899075047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2026665622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,68 +2796,12 @@ MonoBehaviour:
   clearButton: {fileID: 647805588}
   hintText: {fileID: 1572052493}
   isOpen: 0
---- !u!1 &2111012074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2111012076}
-  - component: {fileID: 2111012075}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2111012075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111012074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f43940090d6164aa6e7a91f45aa31b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockPrefab:
-  - {fileID: 962917002488509003, guid: 8086bc3a66c1a5441bba54d22258e3fc, type: 3}
-  - {fileID: 4120982850644054893, guid: 863e77d14504efd429195c6dd5644fbd, type: 3}
-  - {fileID: 3532428922041336489, guid: cf88509aa7456974d88dbc309b5726f8, type: 3}
-  - {fileID: 6053203307805746895, guid: 6ac6ae035afb86e458456defb13fca13, type: 3}
-  - {fileID: 997799031020224062, guid: fe1ee98198fbcff4cabc5477591c0e55, type: 3}
-  - {fileID: 683768047372584421, guid: 61c3fcf5868df9e4f88d4adcd7ca7cfd, type: 3}
-  width: 40
-  depth: 40
-  maxHeight: 16
-  noiseScale: 8
-  Water: 5
---- !u!4 &2111012076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111012074}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1525474057}
-  - {fileID: 2111012076}
+  - {fileID: 1899075049}
   - {fileID: 1175561860}
   - {fileID: 2104685959}
   - {fileID: 405854019}
