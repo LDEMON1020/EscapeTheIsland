@@ -1863,7 +1863,12 @@ MonoBehaviour:
   Iron_ShovelSprite: {fileID: 21300000, guid: 5b3943aea94c1244fa73d6ea50605948, type: 3}
   Stone_Pickaxe: {fileID: 21300000, guid: 1a6674a44471b8a4098dec1beca2fafa, type: 3}
   Iron_PickaxeSprite: {fileID: 21300000, guid: 7a665dd169a50884b92a82504b0468f2, type: 3}
-  TitaniumSprite: {fileID: 0}
+  TitaniumSprite: {fileID: 21300000, guid: d475766a2f8d87e43bb890cc5ba1022e, type: 3}
+  Titanium_AxeSprite: {fileID: 21300000, guid: 7c3a0f17497d359469105a7ba6d4ef14, type: 3}
+  Titanium_ShovelSprite: {fileID: 21300000, guid: e6a6a1aec60f2174ab8dd90c9a042969,
+    type: 3}
+  Titanium_PickaxeSprite: {fileID: 21300000, guid: 0e5cf3564ca1a1746bf23b59a4b5dbe5,
+    type: 3}
   Slot:
   - {fileID: 727930502}
   - {fileID: 201872505}
@@ -2818,10 +2823,13 @@ MonoBehaviour:
   recipeList:
   - {fileID: 11400000, guid: 2aea8e5ff06408d45a1d74ee114d1e76, type: 2}
   - {fileID: 11400000, guid: 4808c8f98f05d3d44bef40d3ba632900, type: 2}
+  - {fileID: 11400000, guid: 0be6c378383b795409bbdacc1f51ce71, type: 2}
   - {fileID: 11400000, guid: 4351c29574268d74595e56299ca4bdde, type: 2}
   - {fileID: 11400000, guid: 1bbd0a940a2fb494f8ee3c8585f61be3, type: 2}
+  - {fileID: 11400000, guid: 1079a8d0bec2a934e8e200426b246e13, type: 2}
   - {fileID: 11400000, guid: ba58887efdbcb3e4bb0a5a9154ae9b67, type: 2}
   - {fileID: 11400000, guid: f102ac90e772708408e5be1b2b6b3a3f, type: 2}
+  - {fileID: 11400000, guid: 3ec7a59f3dec6b848bbf1f3706b731d3, type: 2}
   root: {fileID: 1826939869}
   plannedText: {fileID: 507045639}
   craftButton: {fileID: 141652466}

@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, Iron, Stick, Iron_Axe, iron_Shovel, Stone_Pickaxe, Iron_Pickaxe, Titanium}
+public enum ItemType { Dirt, Grass, Water, Stone, Stone_Axe, Stone_Shovel, 
+    Iron, Stick, Iron_Axe, iron_Shovel, Stone_Pickaxe, Iron_Pickaxe, Titanium, Titanium_Axe, Titanium_Pickaxe, Titanium_Shovel}
 public class Block : MonoBehaviour
 { 
 
