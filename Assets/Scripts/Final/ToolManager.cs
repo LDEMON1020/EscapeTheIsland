@@ -31,4 +31,21 @@ public class ToolManager : MonoBehaviour
         if (!ownedTools.Contains(tool))
             ownedTools.Add(tool);
     }
+
+    public bool IsUpgrade(ItemType oldTool, ItemType newTool)
+    {
+        switch (newTool)
+        {
+            case ItemType.Iron_Pickaxe:
+                return oldTool == ItemType.Stone_Pickaxe;
+
+            case ItemType.Iron_Axe:
+                return oldTool == ItemType.Stone_Axe;
+
+            case ItemType.iron_Shovel:
+                return oldTool == ItemType.Stone_Shovel;
+        }
+
+        return false;
+    }
 }
