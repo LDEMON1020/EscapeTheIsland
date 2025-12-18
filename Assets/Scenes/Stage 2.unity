@@ -1819,7 +1819,12 @@ MonoBehaviour:
   Iron_ShovelSprite: {fileID: 21300000, guid: 5b3943aea94c1244fa73d6ea50605948, type: 3}
   Stone_Pickaxe: {fileID: 21300000, guid: 1a6674a44471b8a4098dec1beca2fafa, type: 3}
   Iron_PickaxeSprite: {fileID: 21300000, guid: 7a665dd169a50884b92a82504b0468f2, type: 3}
-  TitaniumSprite: {fileID: 0}
+  TitaniumSprite: {fileID: 21300000, guid: d475766a2f8d87e43bb890cc5ba1022e, type: 3}
+  Titanium_AxeSprite: {fileID: 21300000, guid: 7c3a0f17497d359469105a7ba6d4ef14, type: 3}
+  Titanium_ShovelSprite: {fileID: 21300000, guid: e6a6a1aec60f2174ab8dd90c9a042969,
+    type: 3}
+  Titanium_PickaxeSprite: {fileID: 21300000, guid: 0e5cf3564ca1a1746bf23b59a4b5dbe5,
+    type: 3}
   Slot:
   - {fileID: 727930502}
   - {fileID: 201872505}

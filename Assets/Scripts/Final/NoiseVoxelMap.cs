@@ -71,7 +71,6 @@ public class NoiseVoxelMap : MonoBehaviour
         go.name = $"A_{x}_{y}_{z}";
 
         var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
-        b.type = ItemType.Grass;
         b.maxHP = 1;
         b.dropCount = 1;
         b.mineable = true;
@@ -87,7 +86,6 @@ public class NoiseVoxelMap : MonoBehaviour
         var go = Instantiate(blockPrefab[1], new Vector3(x, y, z), Quaternion.identity, transform);
         go.name = $"B_{x}_{y}_{z}";
         var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
-        b.type = ItemType.Dirt;
         b.maxHP = 3;
         b.dropCount = 1;
         b.mineable = true;
@@ -104,7 +102,6 @@ public class NoiseVoxelMap : MonoBehaviour
         go.name = $"S_{x}_{y}_{z}";
 
         var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
-        b.type = ItemType.Stone;
         b.maxHP = 5;
         b.dropCount = 1;
         b.mineable = true;
@@ -116,7 +113,6 @@ public class NoiseVoxelMap : MonoBehaviour
         go.name = $"I_{x}_{y}_{z}";
 
         var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
-        b.type = ItemType.Iron;
         b.maxHP = 6;
         b.dropCount = 1;
         b.mineable = true;
@@ -128,7 +124,6 @@ public class NoiseVoxelMap : MonoBehaviour
         go.name = $"T_{x}_{y}_{z}";
 
         var b = go.GetComponent<Block>() ?? go.AddComponent<Block>();
-        b.type = ItemType.Stick;
         b.maxHP = 1;
         b.dropCount = 1;
         b.mineable = true;
